@@ -1,0 +1,19 @@
+//Find and print quotient and remainder
+
+#include<stdio.h>
+int main(void)
+{
+    int x,y,quo,rem;  //declare four variables. x and y for numerator and denominator resp. 
+                      //quo for quotient and rem for remainder
+    printf("enter two nos.\n");
+    scanf("%d %d",&x,&y);  //enter x and y
+    if(y)  //if y is not zero, enter
+    {
+        quo = x/y;  //divide x by y and store quotient in variable quo
+        rem = x%y;  //divide x by y and store remainder in variable rem
+        printf("Quotient = %d\nRemainder = %d",quo,rem);  //print quotient and remainder
+    }
+    else  //if y is zero, print "error"
+        printf("divide by zero error");
+    return 0;
+}
