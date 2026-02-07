@@ -1,0 +1,32 @@
+// Print bigger number from three given numbers(a,b,c)
+
+// possible conditions - [ a>b>c , a<b<c , a>b<c(a?c) , a<b>c ]
+// prime decision - check if a>b or a<b.(condition -> if(a>b) else(a<b) )
+//                -> if yes a>b, then check if a>c also. if yes a is bigger no. [a>b>c]
+//                -> if not then a<c, then c is bigger. [a>b<c(a?c=c)]
+//       if the first if(a>b) is false then else(a<b) is true.
+//                -> if else is true, then check if b>c also. if yes b is bigger. [a<b>c]
+//                -> if b<c, then c is bigger. [a<b<c]
+#include<stdio.h>
+int main(void)
+{
+    int a,b,c,big;
+    printf("enter three nos.\n");
+    scanf("%d %d %d",&a,&b,&c);
+    if(a > b)
+        {
+            if(a > c)
+                big = a;
+            else
+                big = c;
+        }
+        else
+        {
+            if(b > c)
+                big = b;
+            else
+                big = c;
+        }
+        printf("bigger no. is %d",big);
+        return 0;
+}
