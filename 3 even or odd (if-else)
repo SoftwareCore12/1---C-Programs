@@ -1,0 +1,14 @@
+// Print whether a number is even or odd
+
+#include<stdio.h>
+int main(void)
+{
+int num;  //declare an integer variable 'num' to store a number
+printf("enter a no.\n");
+scanf("%d",&num);  //enter a no. to check, if it is even or odd
+if(num % 2 == 0)  //divide the no. by 2, if the remainder is 0, then print even
+    printf("no. is even\n");
+else  //if the remainder is not 0, print odd
+    printf("no. is odd");
+return 0;
+}
