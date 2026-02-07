@@ -1,0 +1,14 @@
+// Print the bigger number
+
+#include<stdio.h>
+int main(void)
+{
+int a,b;  //declare two variables to store two values for comparison
+printf("enter two nos.\n");
+scanf("%d %d",&a,&b);  //input two values for comparison
+if(a>b)  //if a is greater than b, print a
+    printf("a = %d is greater than b",a);
+else  //if b is greater than a, print b
+    printf("b = %d is greater than a",b);
+return 0;
+}
