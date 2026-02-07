@@ -1,0 +1,18 @@
+// Print a message if negative number is entered
+
+#include<stdio.h>
+int main(void)
+{
+    int num;  //declare a variable to check, whether it is negative or positive
+    printf("enter a no.");
+    scanf("%d",&num);  //input a no. to check..
+    if(num < 0)  //if the no. is smaller than 0, then the no. is negative
+    {
+        printf("no = %d is negative\n",num);  //print "negative" no.
+        num = -num;  //make the no. positive
+        printf("now the no. is positive %d\n",num);  //now print the no. as positive no
+    }
+    else  //if the no is positive, print "positive" no.
+        printf("no. is positive %d\n",num);
+    return 0;
+}
