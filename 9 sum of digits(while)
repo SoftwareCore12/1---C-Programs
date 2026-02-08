@@ -1,0 +1,34 @@
+// Print the sum of digits of any no.
+
+//to find sum of digits, we need all digits one by one. and then add them in a variable.
+// % operator returns remainder when the no is divided. if the no is 1234, after %10 operation, remainder is 4.
+//store the operation result in rem variable and add it in sum variable.
+// now we need to remove this last digit(4).
+// / operator returns quotient when the no is divided. if the no is 1234, after /10 operation, quotient is 123.
+//while loop checks the condition again, it is 123, greater than zero. and the loop continues until num becomes 0.
+
+//before loop -   num = 1234   sum = 0   rem = 0
+//iteration 1 -  1234%10=4     sum = 4       rem = 4   1234/10=123   num = 123
+//iteration 2 -  123%10=3      sum = 4+3=7   rem = 3   123/10=12     num = 12
+//itr 3       -  12%10=2       sum = 7+2=9   rem = 2   12/10=1       num = 1
+//itr 4       -  1%10=1        sum = 9+1=10  rem = 1   1/10=0        num = 0  [while loop breaks here when num becomes zero]
+
+//             { num%10          sum+rem               num/10 }-->repetition of operations
+//write a condition for the loop and place the repition inside the loop...
+
+#include <stdio.h>
+
+int main()
+{
+    int num,sum=0,rem;  //num to store i/p no from user, sum to store sum and rem to store remainder
+    printf("enter a no.\n");
+    scanf("%d",&num);  //enter a no and store it in num variable
+    while(num>0)  //loop continues until no is greater than 0
+    {
+        rem = num % 10;  //store remainder in rem varable
+        sum = sum + rem;  //add remainder in sum variable
+        num = num / 10;  //divide num by 10 to remove last digit
+    }
+    printf("sum of digits = %d\n",sum);  //print sum of digits
+    return 0;
+}
