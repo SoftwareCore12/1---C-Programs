@@ -1,0 +1,15 @@
+// Print nos. from 1 to 10
+
+#include <stdio.h>
+
+int main()
+{
+    int i=1;  //declare a variable for loop condition and initialize it with 1
+    while(i<=10)  //loop continues until i becomes 10
+    {
+       printf("%d\t",i);  //print the value of
+       i++;  //increment i by 1
+    }
+
+    return 0;
+}
