@@ -1,0 +1,22 @@
+// Print nos in reverse order with a difference of 2
+
+//ex - 10 8 6 4 2
+//to print nos continuously, a loop is required.
+//since 1st no is 10. loop variable should be initialised with 10. i=10
+//and the next no is 8. the variable should decrement by 2. i=i-2 => i=10-2 => i=8
+//and so on... till 2
+//a condition is required to break the loop. since the last no is 2. i should be smaller than 2. while(i>0)
+//or we can write conditions like - while(i>=2),while(i>1).
+
+#include <stdio.h>
+
+int main()
+{
+    int i=10;  //initialize i with max value 10
+    while(i>0)  //loop continues until i is greater than 0
+    {
+        printf("%d\t",i);  //print no.
+        i=i-2;  //decrement i by 2
+    }
+    return 0;
+}
