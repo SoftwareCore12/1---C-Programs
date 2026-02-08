@@ -1,0 +1,28 @@
+// Find the factorial of any no
+
+// if n is a no. factorial of n = n*(n-1)*(n-2)*_ _ _*(n-(n-1)).
+// ex - factorial of 8 = 8x7x6x5x4x3x2x1
+//before loop :  n=8    fact = 1
+// itr 1 -       n=8    fact = 1*8=8      n--   n=7
+// itr 2 -       n=7    fact = 8*7=56     n--   n=6
+// itr 3 -       n=6    fact = 56*6=336   n--   n=5
+// ....last itr  n=1    fact = 40320*1    n--   n=4 [loop breaks while(n>0)]
+//                    { fact*n            n-- }-->repetition
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    long fact=1;
+    printf("enter a no - \n");
+    scanf("%d",&n);
+    printf("factorial of %d is ",n);
+    while(n>0)
+    {
+        fact = fact * n;
+        n--;
+    }
+    printf("%d",fact);
+    return 0;
+}
