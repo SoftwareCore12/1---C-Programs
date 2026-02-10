@@ -1,0 +1,44 @@
+// Convert a binary no. to a decimal no.
+
+// ex - 1101(binary) = 1x2^0 + 0x2^1 + 1x2^2 + 1x2^3 (decimal)
+// first we need to take the last digit of binary no. And multiply this digit by 2^0.
+// since 2^0=1. so we can initialize the multiplication variable with 1 (j=1).
+// now add this result in sum variable.
+// update multiplication variable for the next iteration.second iteration is 2^1=2.
+// from second iteration to the last iteration, last digit is multiplied by power of 2.
+// so after performing first multiply and add operation, update j with 2. now j is 2.
+// in 3rd itr , value of j is 4 and so on...  ( 2^0=1,2^1=2,2^2=4,2^3=8,2^4=16,2^5=32....)
+// at the end, skip the last digit
+
+// take last digit - n%10
+// multiply last digit by power of 2 - rem*j
+// add it in sum variable - sum+(rem*j)
+// multiply j by 2 for next iteration - j*2
+// skip last digit - n/10
+
+// itr 1 -   1101/10=1   1*1=1   0+1=1           1*2=2   1101/10=110
+// itr 2 -   110/10=0    0*2=0   1+0=1           2*2=4   110/10=11
+// itr 3 -   11/10=1     1*4=4   1+4=5           4*2=8   11/10=1
+// itr 4 -   1/10=1      1*8=8   5+8=13          8*2=16  1/10=0 ]-->loop breaks here, when n=0
+
+//         { n%10       (rem*j)  sum+(rem*j)     j*2     n/10 }
+//         { sum+=((n%10)*j)  j*2   n/=10 }
+
+#include <stdio.h>
+
+int main()
+{
+    int n,j=1,rem,sum=0;
+    printf("enter a no in binary\n");
+    scanf("%d",&n);
+    printf("binary is %d, decimal is ",n);
+    while(n>0)
+    {
+        rem = n % 10;
+        sum = sum + (rem * j);
+        j = j * 2;
+        n = n/ 10;
+    }
+    printf("%d",sum);
+    return 0;
+}
