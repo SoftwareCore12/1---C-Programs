@@ -1,0 +1,42 @@
+// Print nos from 1 to 10 using for loop
+// 1  2  3  4  5  6  7  8  9  10
+
+// for loop has 3 expressions. first is variable initialisation, second is loop condition check, third is variable update.
+// in nos. from 1 to 10, 1 is the first no. so initialize the loop variable with 1.(i=0)
+// and the last no is 10. the loop should break after printing 10(print until i becomes equal to 10).(i<=10)
+// the difference in nos is 1. so update loop variable by 1 in each iteration.
+// for loop - 1 initialize variable, 2 check condition(3 if true, execute body.if false break the loop), 3 update variable.
+
+// itr 1 -    i=1   1<10
+//                          i=2
+// itr 2 -    i=2   2<10
+//                          i=3
+// itr 3 -    i=3   3<10
+//                          i=4
+// itr 4 -    i=4   4<10
+//                          i=5
+// itr 5 -    i=5   5<10
+//                          i=6
+// itr 6 -    i=6   6<10
+//                          i=7
+// itr 7 -    i=7   7<10
+//                          i=8
+// itr 8 -    i=8   8<10
+//                          i=9
+// itr 9 -    i=9   9<10
+//                          i=10
+//itr 10 -    i=10  10=10
+//                          i=11
+//  itr  -    i=11  11<=10(false)-->loop breaks here
+
+#include <stdio.h>
+
+int main()
+{
+    int i;  //declare variable for loop
+    for(i=1;i<=10;i++)  //initialize i with 1 then check condition, if true print i, if false come out of loop
+    {
+        printf("%d\t",i);  //print i
+    }  //update i
+    return 0;
+}
