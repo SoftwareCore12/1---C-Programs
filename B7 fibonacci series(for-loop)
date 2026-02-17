@@ -1,0 +1,46 @@
+// Print fibonacci series upto n terms
+
+// ex - 1,1,2,3,5,8,13,21,34,55,89,.......
+//    1+1=2,1+2=3,2+3=5,3+5=8,5+8=13,8+13=21.....
+//    previous_term + sum = next_term
+
+// we need atleast two variables to store 1st and 2nd term to add. And sum variable to store addition.
+// 1 + 1 = 2     x + y = sum
+//     /   /
+//    /   /      x = y
+//   /   /       y = sum
+//  /   /
+// 1 + 2 = 3     x + y = sum
+//     /   /
+//    /   /      x = y
+//   /   /       y = sum
+//  /   /
+// 2 + 3 = 5
+//     /   /
+//    /   /
+//   /   /
+//  /   /
+// 3 + 5 = 8
+//     /   /
+//    /   /
+//   /   /
+//  /   /
+// 5 + 8 = 13  .............
+
+#include <stdio.h>
+
+int main()
+{
+    int n,i,x=0,y=1,sum;
+    printf("enter the no of terms - ");
+    scanf("%d",&n);  //enter no of terms and save it in 'n'
+    printf("%d ",y);  //print first term
+    for(i=1;i<=n;i++)  //loop until no of terms
+    {
+        sum = x + y;  //add first and second term
+        printf("%d ",sum);  //print sum as next term
+        x=y;  //put next term value in previous term variable. to make it previous term
+        y=sum;  //put sum in next_term variable.  now it is (prev.term + sum)
+    }
+    return 0;
+}
