@@ -1,0 +1,36 @@
+// Find the sum of this series upto n terms - 1 + 2 + 4 + 7 + 11 + 16 + _ _ _ _
+
+//         ex - 1 + 2 + 4 + 7 + 11 + 16 = 41   . (no of terms = 6)
+// difference -   1   2   3   4    5    (int i with 1 and increment once in every iteration)
+// first term is 1.(init term variable with 1)
+
+
+// itr 1 -  i=1    1<6   { sum=sum+term=0+1=1     term=term+i=1+1=2 }
+//                                                                     i=2
+// itr 2 -  i=2    2<6   { sum=sum+term=1+2=3     term=term+i=2+2=4 }
+//                                                                     i=2
+// itr 3 -  i=3    3<6   { sum=sum+term=3+4=7     term=term+i=4+3=7 }
+//                                                                     i=2
+// itr 4 -  i=4    4<6   { sum=sum+term=7+7=14    term=term+i=7+4=11 }
+//                                                                     i=2
+// itr 5 -  i=5    5<6   { sum=sum+term=14+11=25  term=term+i=11+5=16 }
+//                                                                     i=2
+// itr 6 -  i=6    6=6   { sum=sum+term=25+16=41  term=term+i=16+6=22 }
+//                                                                     i=7
+// itr   -  i=1    7<=6(false)[loop end]   sum=41
+
+#include <stdio.h>
+
+int main()
+{
+    int i,sum=0,term=1,n;
+    printf("enter the no of terms for series - ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        sum = sum + term;
+        term = term + i;
+    }
+    printf("sum of %d terms is %d\n",n,sum);
+    return 0;
+}
