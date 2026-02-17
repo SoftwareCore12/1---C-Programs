@@ -1,0 +1,19 @@
+// Print the sum of digits of any no using for loop
+
+// ex - 2435 = 2+4+3+5 = 14
+
+#include <stdio.h>
+
+int main()
+{
+    int n,rem,sum=0;
+    printf("enter a no - ");
+    scanf("%d",&n);
+    for( ;n>0;n/=10)  //loop until n>0; remove last digit at the end of iteration
+    {
+        rem = n %10;  //take last digit
+        sum = sum + rem;  add last digit to sum variable
+    }
+    printf("sum of digits is - %d",sum);  //print sum of digits
+    return 0;
+}
