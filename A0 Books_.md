@@ -16,7 +16,7 @@
 16:- How to build android apps with kotlin - Alex forester, Eran bodjnah
 17:- Android UI development with jetpack compose - Thomas kunneth
 18:- VHDL - Douglas l.perry (first 200 pages)
-19:- Digital electronics A practical approach with VHDL - William Kleitz (till chapter-13 Shift registers) (exclude ch-9 Logic families)
+19:- Digital electronics A practical approach with VHDL - William Kleitz (till chapter-13 Shift registers) (exclude ch-4 PLD, CPLD and FPGA. and ch-9 Logic families)
 20:- Introductory circuit analysis - Robert L.Boylestad
 21:- Electronic devices and circuit theory -  Robert L.Boylestad, Louis nashelsky
 22:- Fundamental of electric circuits - Charles k. alexander, Matthew n.o. sadiku (exclude - Three phase circuits, magnetically coupled circuits, two-port networks)
