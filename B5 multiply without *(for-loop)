@@ -1,0 +1,30 @@
+// Multiply two positive nos without using * operator
+
+// ex - 5x6 = 5+5+5+5+5+5 = 30
+// itr 1 -  i=1    1<6    {sum=0+5}
+//                                     i=2
+// itr 2 -  i=2    2<6    {sum=5+5}
+//                                     i=3
+// itr 3 -  i=3    3<6    {sum=10+5}
+//                                     i=4
+// itr 4 -  i=4    4<6    {sum=15+5}
+//                                     i=5
+// itr 5 -  i=5    5<6    {sum=20+5}
+//                                     i=6
+// itr 6 -  i=6    6=6    {sum=25+5}
+//                                     i=7
+// itr   -  i=7    7<=6(false)
+#include <stdio.h>
+
+int main()
+{
+    int i,a,b,sum=0;
+    printf("enter two nos. - ");
+    scanf("%d%d",&a,&b);
+    for(i=1;i<=b;i++)
+    {
+        sum = sum + a;
+    }
+    printf("product is - %d\n",sum);
+    return 0;
+}
