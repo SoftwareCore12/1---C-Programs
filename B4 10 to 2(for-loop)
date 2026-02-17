@@ -1,0 +1,30 @@
+// Print nos in reverse order with a difference of 2
+
+// ex - 10, 8, 7, 6, 5, 4, 2
+// initial no - 10 (i=10)
+// from 10 to 2 (condition- i>0)
+// decrement 2 (i=i-2)
+
+// itr 1 - i=10   10>0
+//                        i=10-2 => i=8
+// itr 2 - i=8    8>0
+//                        i=8-2  => i=6
+// itr 3 - i=6   6>0
+//                        i=6-2 => i=4
+// itr 4 - i=4    4>0
+//                        i=4-2  => i=2
+// itr 5 - i=2    2>0
+//                        i=2-2  => i=0
+// itr -   i=0    0>0(false)
+
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    for(i=10;i>0;i=i-2)
+    {
+        printf("%d\t",i);
+    }
+    return 0;
+}
