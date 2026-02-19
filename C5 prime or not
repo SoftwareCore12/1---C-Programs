@@ -1,0 +1,55 @@
+// Find whether a no is prime or not
+
+// a no is prime if it is divisible by 1 and itself.
+// ex - 7 is divisible by 1 and 7.
+
+// a no n will be prime if remainders of n/2,n/3,n/4.....n/sqrt(n) are all non zero.
+// if n=2,4,6,8,9,10,12,14,16,18......(non-prime).when a non-prime no is divided by 2 or 3..., remainder will be zero.
+// so,when n%2 or n%3... is zero, the no is not prime.
+
+// but a prime no is not divisible by any no except 1 or itself. therefore we will check the divisibility until n/sqrt(n).
+// 2=2x1, 3=3x1, 4=2x2, 5=5x1, 6=sqrt(3).sqrt(2), 7=7x1, 8=2x2x2=2.sqrt(2), 9=3x3, 10=sqrt(2).sqrt(5), 11=11x1 .....
+// 6=sqrt(3).sqrt(2)=1.732x1.414=2.449048^2=5.99783=6(approx)
+// this is the reason for checking until sqrt(n)[n/sqrt(n)=sqrt(n)]. if the sqrt(n) is divisible by any no, then its square will
+// also be divisible by that no. ex - 25,5 are divisible by 5. 36,6 are divisible by 6......
+// this will reduce the no of iterations in for loop.
+
+// if n=1 or 2 or 3
+// i=2>sqrt(1,2,3) [false loop condition]
+// control will be transferred to if(i>sqrt(n))
+// if(i=2 > sqrt(1,2,3)) true
+// print-"prime"
+
+// if n=4                         |  if n=5                   |  if n=6
+// i=2 i=sqrt(4)=2                |  i=2 i=sqrt(5)=2.23       |  i=2 i=sqrt(6)=2.44
+// if(2%2==0) true-> break        |  if((5%2=1)==0)false      |  if((6%2==0)==0)true->break
+// if(2>2) false                  |  i++ i=3                  |  if(2>2.44)false
+// else(true)->print "not prime"  |  if(3>2.23)true->"prime"  |  else(true)->"not prime"
+
+
+// if n=7                         |  if n=8                   |  if n=9
+// i=2 i=sqrt(7)=2.64             |  i=2 i=sqrt(8)=2.82       |  i=2 i=sqrt(9)=3
+// if(7%2==0) false               |  if((8%2==0)true->break   |  if((9%2==0)false
+// if(3>2.64) true                |  if(2>2.44)false          |  i++ i=3
+// print "prime"                  |  else(true)->"not prime"  |  i=3 i=sqrt(9)=3
+//                                                            |  if(9%3==0)true->break
+//                                                            |  if(3>3)false
+//                                                            |  else(true)->"not prime" .......................
+
+#include <stdio.h>
+#include<math.h>
+
+int main()
+{
+    int i,n;
+    printf("enter a no - ");
+    scanf("%d",&n);
+    for(i=2;i<=sqrt(n);i++)
+        if(n%i==0)
+        break;
+    if(i>sqrt(n))
+        printf("%d is prime",n);
+    else
+        printf("%d not prime",n);
+    return 0;
+}
