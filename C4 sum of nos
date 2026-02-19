@@ -1,0 +1,15 @@
+// Find the sum of nos entered
+
+#include <stdio.h>
+
+int main()
+{
+    int n,sum=0;
+    do{
+        printf("enter a no(enter 0 to stop) : ");
+        scanf("%d",&n);  //eneter a no
+        sum+=n;  //add every no in sum
+    }while(n!=0);  //continue until user enetrs 0
+    printf("sum = %d",sum); //print sum
+    return 0;
+}
