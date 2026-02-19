@@ -1,0 +1,16 @@
+// Count digits in a no
+
+#include <stdio.h>
+
+int main()
+{
+    int n,count=0;
+    printf("enter a no - ");
+    scanf("%d",&n);
+    do{
+        n/=10;  //eliminate last digit
+        count++;  //increment count for every digit
+    }while(n>0);  //loop until n becomes 0
+    printf("count = %d",count);
+    return 0;
+}
