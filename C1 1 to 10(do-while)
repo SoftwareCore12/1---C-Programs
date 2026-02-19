@@ -1,0 +1,14 @@
+// Print nos from 1 to 10 using do-while loop
+
+#include <stdio.h>
+
+
+int main()
+{
+    int n=1;  //init n with first no(1)
+    do{
+        printf("%d ",n);  //print no.
+        n++;  //increment n by 1
+    }while(n<=10);  //continue loop until n=10
+    return 0;
+}
