@@ -1,0 +1,27 @@
+// Find the sum of digits of a no until the sum is reduced to 1 digit.
+
+// ex - 538769 -> 38 -> 11 -> 2
+
+#include<stdio.h>
+
+int main()
+{
+    int num,rem,sum;
+    printf("enter a no - ");
+    scanf("%d",&num);
+    do{
+        sum=0;
+        while(num>0)
+            {
+
+              rem = num%10;
+              sum+=rem;
+              num/=10;
+            }
+    printf("%d ",sum);
+    num=sum;  //store sum in num for next iteration
+    }while(num/10!=0);  //break loop when n/10=0 (ex- last iteration - 2/10 = 0).while loop will also work.
+
+}
+// while(n>0) will not work here. because, in last iteration sum has value 2. after num=sum, num has value 2. 2>0(true).
+// this loop will become infinite loop.
