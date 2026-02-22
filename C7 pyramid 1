@@ -1,0 +1,45 @@
+// Print
+// *
+// **
+// ***
+// ****
+// *****
+
+// to print this pyramid we will take two nested for loops.
+// outer loop for 5 lines and inner loop for stars in each line.
+// for five lines, 5 iterations are required. and for stars upto 5, 5 iterations are required.
+// in outer loop init i with 1. for 5 iterations, end loop when i becomes equal to five.
+// in inner loop init i with 1. for only 1 star in first line, init j with 1. the inner loop should end after printing 1 star.
+// in second line, 2 stars are printed. in third line 3 stars are printed. stars are incrementing by 1 for every next line.
+// line no. and stars in that line are same . so, outer loop for lines, can be used to print no of stars.
+// (j upto i) condition can be used in inner loop, to print no of stars.
+
+// itr 1 -  i=1   1<5          |    itr 2 -  i=2   2<5
+//         {                   |            {
+//          j=1   1=1          |             j=1   1<2
+//         {                   |            {
+//          print *            |             print *
+//         } j++ -> j=2        |            } j++ -> j=2
+//          j=2   2<=1(false)  |             j=2   2=2
+//                             |            {
+//          print next_line                   print *
+//         } i++ -> i=2                     } j++ -> j=3
+//                                           j=3   3<=2(false)
+//                                           print \n
+//                                          } i++ -> i=3 .....................
+
+
+#include <stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
