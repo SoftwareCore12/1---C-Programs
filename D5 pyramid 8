@@ -1,0 +1,28 @@
+// 5
+// 4 4
+// 3 3 3
+// 2 2 2 2
+// 1 1 1 1 1
+
+// (i=1,j=1)->5 [n-i=5-1=4  n-i+1=5-1+1=5]
+// (i=2,j=1)->4   (i=2,j=2)->4
+// (i=3,j=1)->3   (i=3,j=2)->3   (i=3,j=3)->3
+// (i=4,j=1)->2   (i=4,j=2)->2   (i=4,j=3)->2   (i=4,j=4)->2
+// (i=5,j=1)->1   (i=5,j=2)->1   (i=5,j=3)->1   (i=5,j=4)->1   (i=5,j=5)->1  ->in every line, i is constant, j is variable.
+// if n=5 n-i=0          n-i=0          n-j=0          n-j=0          n-j=0  (use i in operations)
+// add 1 n-i+1=5       n-i+1=4        n-i+1=3        n-i+1=2        n-i+1=1  (for every line)
+#include <stdio.h>
+
+int main()
+{
+    int i,j,n=5;
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%d ",(n-i+1));
+        }
+        printf("\n");
+    }
+    return 0;
+}
